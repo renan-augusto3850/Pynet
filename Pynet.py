@@ -1,17 +1,17 @@
-from PyQt5.QtWidgets import *
+from PyQt6.QtWidgets import *
 import sys
-from PyQt5.QtWebEngineWidgets import *
-from PyQt5.QtCore import *
+from PyQt6.QtWebEngineWidgets import *
+from PyQt6.QtCore import *
+from PyQt6.QtGui import *
 
 
 class MainWindow(QMainWindow):
 
     def aurl (self):
         url, done1 = QInputDialog.getText(
-	  self, 'Input Dialog', 'Digite o URL: ')
+		self, 'Input Dialog', 'Digite o URL: ')
         protocolo = "https://"
         realurl = protocolo + url
-
         self.browser.setUrl(QUrl(realurl))
 
     def go_to_home (self):
